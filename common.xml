@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
         <remote name="github" fetch="https://github.com" />
+        <remote name="android" fetch="https://android.googlesource.com" />
         <default remote="github" revision="master" />
 
         <!-- OP-TEE gits -->
@@ -10,7 +11,7 @@
         <project path="optee_test"           name="OP-TEE/optee_test.git" />
 
         <!-- linaro-swg gits -->
-        <project path="linux"                name="linaro-swg/linux.git"                  revision="optee" clone-depth="1" />
+        <project path="pkvm-host-linux"      name="kernel/common"                     remote="android" revision="android15-6.6-lts" clone-depth="1" />
         <project path="optee_examples"       name="linaro-swg/optee_examples.git" />
 
         <!-- buildroot git -->
