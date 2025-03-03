@@ -2,7 +2,12 @@
 <manifest>
         <remote name="github" fetch="https://github.com" />
         <remote name="android" fetch="https://android.googlesource.com" />
+        <remote name="chromium" fetch="https://chromium.googlesource.com" />
         <default remote="github" revision="master" />
+
+        <!-- pKVM -->
+        <project path="pkvm-host-linux"      name="kernel/common"       remote="android"  revision="android15-6.6-lts"    clone-depth="1" />
+        <project path="crosvm"               name="crosvm/crosvm"       remote="chromium" revision="main"                 clone-depth="1" />
 
         <!-- OP-TEE gits -->
         <project path="optee_client"         name="OP-TEE/optee_client.git" />
@@ -11,7 +16,6 @@
         <project path="optee_test"           name="OP-TEE/optee_test.git" />
 
         <!-- linaro-swg gits -->
-        <project path="pkvm-host-linux"      name="kernel/common"                     remote="android" revision="android15-6.6-lts" clone-depth="1" />
         <project path="optee_examples"       name="linaro-swg/optee_examples.git" />
 
         <!-- buildroot git -->
